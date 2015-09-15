@@ -3,11 +3,6 @@
 ## Presentation
 
 ```bash
-# When working on the slides
-npm run slides:dev
-```
-
-```bash
 # When presenting
 npm run slides
 ```
