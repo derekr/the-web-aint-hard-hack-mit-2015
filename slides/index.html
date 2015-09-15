@@ -1,146 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Foo</title>
-<meta charset='utf-8' />
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-<style type='text/css'>
-body {
-  background:#000;
-  color:#fff;
-  font-family:'Georgia';
-  margin:0;
-}
+  <title>Big</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link href='big.css' rel='stylesheet' type='text/css' />
+  <script src='big.js'></script>
+</head>
+<body>
+<div class="center">The Web Aint Hard</div>
+<div><em>@meanjim</em> & <em>@drk</em></div>
+<div><img src="logo.svg" /></div>
 
-@-webkit-keyframes blinker {
-  from { opacity: 1.0; }
-  to { opacity: 0.0; }
-}
+<!-- PROLOGUE -->
+<div>websites</div>
+<div>web<em>apps</em></div><!-- we'll get to that -->
+<div>websites</div>
+<div>html, css, js</div>
+<div><img src="basic-html01.png" /></div>
+<div>this presentation</div>
+<div><img src="basic-html01.png" /></div> <!-- @TODO: replace w/ screen of this file -->
+<div>webapps</div>
+<div>admittedly more complex</div>
+<div><img src="basic-html01.png" /></div> <!-- @TODO: add screenshot of a redux/react example haha -->
+<div>databases, servers, auth, microservices etc</div> <!-- @TODO: break these slides out -->
 
-em {
-  -webkit-animation-name: blinker;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-  -webkit-animation-duration: 800ms;
-}
+<!-- TOOLING -->
+<div>Tips & Tricks and helpful Tools</div>
 
-strong {
-  font-weight:normal;
-  color:#FFF707;
-}
+<!-- THE CLIENT -->
+<div>Overview of sample client app</div> <!-- @TODO: more slides! -->
 
-a {
-  color:#FFF707;
-  text-decoration:none;
-}
+<!-- FIREBASE -->
+<div>Firebase</div>
+<div><img src="firebase01.png" /></div>
+<div><img src="firebase02.png" /></div>
+<div>realtime data store</div>
+<div>auth</div>
+<div>hosting</div>
 
-div {
-  cursor:pointer;
-  cursor:hand;
-  position:absolute;
-  top:0;
-  left:0;
-}
+<!-- THE END -->
+<div>mentoring</div>
+<div>thank you</div>
 
-</style>
-<script type='text/javascript'>
-window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0, ti;
-    if (!s) return;
-    function go(n) {
-        cur = n;
-        var i = 1e3, e = s[n], t;
-        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
-        e.style.display = 'inline';
-        e.style.fontSize = i + 'px';
-        if (e.firstChild.nodeName === 'IMG') {
-            document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
-            e.firstChild.style.display = 'none';
-            if ('classList' in e) e.classList.add('imageText');
-        } else {
-            document.body.style.backgroundImage = '';
-            document.body.style.backgroundColor = e.style.backgroundColor;
-        }
-        if (ti !== undefined) window.clearInterval(ti);
-        t = parseInt(e.getAttribute('time-to-next') || 0, 10);
-        if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
-        while (
-            e.offsetWidth > window.innerWidth ||
-            e.offsetHeight > window.innerHeight) {
-            e.style.fontSize = (i -= 5) + 'px';
-            if (i < 0) break;
-        }
-        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
-        if (window.location.hash !== n) window.location.hash = n;
-        document.title = e.textContent || e.innerText;
-    }
-    document.onclick = function() { go(++cur % (s.length)); };
-    function fwd() { go(Math.min(s.length - 1, ++cur)); }
-    function rev() { go(Math.max(0, --cur)); }
-    document.onkeydown = function(e) {
-        if (e.which === 39) fwd();
-        if (e.which === 37) rev();
-    };
-    document.ontouchstart = function(e) {
-        var x0 = e.changedTouches[0].pageX;
-        document.ontouchend = function(e) {
-            var x1 = e.changedTouches[0].pageX;
-            if (x1 - x0 < 0) fwd();
-            if (x1 - x0 > 0) rev();
-        };
-    };
-    function parse_hash() {
-        return Math.max(Math.min(
-            s.length - 1,
-            parseInt(window.location.hash.substring(1), 10)), 0);
-    }
-    if (window.location.hash) cur = parse_hash() || cur;
-    window.onhashchange = function() {
-        var c = parse_hash();
-        if (c !== cur) go(c);
-    };
-
-    go(cur);
-};
-</script></head><body>
-<div><h2 id="the-web-aint-hard">The Web Aint Hard</h2>
-</div>
-<div><p><strong>@meanjim</strong> &amp; <strong>@drk</strong> from <a href="patreon.com">patreon.com</a></p>
-</div>
-<div><p>What makes up a website?</p>
-</div>
-<div><p>HTML… Mabye CSS… Maybe JavaScript</p>
-</div>
-<div><p>Not too much really!</p>
-</div>
-<div><p>What about apps?</p>
-</div>
-<div><p>talk about databases, servers, auth, microservices etc</p>
-</div>
-<div><p>Tips &amp; Tricks and helpful Tools</p>
-</div>
-<div><p>We&#39;re going to build a single page realtime chat app</p>
-</div>
-<div><p>We can build everything using the Firebase service</p>
-</div>
-<div><p>It provides hosting for our html, javascript and styles</p>
-</div>
-<div><p>Realtime publish/subscribe data</p>
-</div>
-<div><p>Authentication w/ Facebook, twitter and other social services</p>
-</div>
-<div><p>@meanjim is going to live code (walkthrough of code?) now because the web aint hard</p>
-</div>
-<div><ul>
-<li>Requirements/features for</li>
-<li>The Chat app</li>
-</ul>
-</div>
-<div><p>any more info about the app?</p>
-</div>
-<div><p>Summary of tools</p>
-</div>
-<div><p>We&#39;ll be mentoring all weekend if y&#39;all want to chat!</p>
-</div>
-<div><p>Thanks!</p>
-</div>
+</body>
+</html>

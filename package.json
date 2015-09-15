@@ -4,20 +4,12 @@
   "description": "The Web Aint Hard – HackMIT 2015",
   "main": "index.js",
   "dependencies": {
-    "biggie": "0.0.0",
     "firebase-tools": "^1.2.0",
-    "live-server": "^0.8.1",
-    "parallelshell": "^2.0.0",
-    "watch": "^0.16.0"
+    "live-server": "^0.8.1"
   },
   "devDependencies": {},
   "scripts": {
-    "slides": "npm run slides:build; open slides/index.html",
-    "slides:build": "cat slides/index.md | biggie > slides/index.html",
-    "slides:watch": "watch 'npm run slides:build' slides",
-    "slides:server": "live-server slides",
-    "slides:dev": "parallelshell 'npm run slides:watch' 'npm run slides:server'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "slides": "live-server slides"
   },
   "repository": {
     "type": "git",
