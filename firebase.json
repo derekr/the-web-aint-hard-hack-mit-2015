@@ -1,0 +1,9 @@
+{
+  "firebase": "the-web-aint-hard",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
