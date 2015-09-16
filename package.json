@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "slides": "live-server slides"
+    "slides": "live-server slides",
+    "deploy": "firebase deploy"
   },
   "repository": {
     "type": "git",

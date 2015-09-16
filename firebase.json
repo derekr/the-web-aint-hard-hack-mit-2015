@@ -1,6 +1,6 @@
 {
   "firebase": "the-web-aint-hard",
-  "public": ".",
+  "public": "./app",
   "ignore": [
     "firebase.json",
     "**/.*",
