@@ -4,13 +4,41 @@
   "description": "The Web Aint Hard – HackMIT 2015",
   "main": "index.js",
   "dependencies": {
+    "firebase": "^2.2.9",
     "firebase-tools": "^1.2.0",
-    "live-server": "^0.8.1"
+    "lesshat": "^3.0.2",
+    "live-server": "^0.8.1",
+    "riot": "^2.2.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^5.8.22",
+    "babel-eslint": "^4.0.5",
+    "babel-loader": "^5.3.2",
+    "crypto": "0.0.3",
+    "css-loader": "^0.16.0",
+    "eslint": "^1.1.0",
+    "eslint-friendly-formatter": "^1.1.0",
+    "eslint-loader": "^1.0.0",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "html-loader": "^0.3.0",
+    "html-webpack-plugin": "^1.6.1",
+    "http-proxy": "^1.11.1",
+    "json-loader": "^0.5.2",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "path": "^0.11.14",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
   "scripts": {
     "slides": "live-server slides",
-    "deploy": "firebase deploy"
+    "deploy-firebase": "firebase deploy",
+    "link": "rm -f ./node_modules/components; rm -f ./node_modules/constants; rm -f ./node_modules/stores; rm -f ./node_modules/utilities; ln -s ../app/components ./node_modules/components; ln -s ../app/constants ./node_modules/constants; ln -s ../app/stores ./node_modules/stores; ln -s ../app/utilities ./node_modules/utilities;",
+    "start": "npm run link; node server",
+    "production": "npm run link; NODE_ENV=production webpack --config webpack.config.production.js;",
+    "deploy-server": "npm run link; npm run production; PORT=3000 NODE_ENV=production node server;"
   },
   "repository": {
     "type": "git",
