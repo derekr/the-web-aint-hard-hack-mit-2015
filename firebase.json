@@ -1,5 +1,5 @@
 {
-  "firebase": "the-web-aint-hard",
+  "firebase": "web-aint-hard",
   "public": "./dist",
   "ignore": [
     "firebase.json",
