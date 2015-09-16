@@ -31,7 +31,7 @@ riot.tag(
 
         app.twitterAuth = function(){
             return function(event){
-                let ref = new Firebase('https://the-web-aint-hard.firebaseio.com');
+                let ref = new Firebase('https://web-aint-hard.firebaseio.com');
 
                 app.authText = 'Popup is opened';
 
