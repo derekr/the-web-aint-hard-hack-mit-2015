@@ -4,6 +4,7 @@ node_js:
 sudo: false
 after_success:
   - $(which npm) run copy-slides
+  - $(which npm) run production
   - mkdir /home/travis/tmp
   - $(which npm) install -g firebase-tools
   - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo -e "${FIREBASE_EMAIL}\n${FIREBASE_PASSWORD}" | firebase deploy; fi
