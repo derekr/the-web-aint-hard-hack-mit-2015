@@ -8,6 +8,24 @@
 npm run slides
 ```
 
+```bash
+# Copies slides to /dist folder
+npm run copy-slides
+```
+
 ## Client
 
-How to run the client
+```bash
+# Run dev server on localhost:3001
+npm start
+```
+
+```bash
+# Builds the clientside app in to /dist folder
+npm run production
+```
+
+```bash
+# Deploys /dist to web-aint-hard.firebaseapp.com
+npm run deploy
+```
