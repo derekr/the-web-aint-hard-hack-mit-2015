@@ -10,6 +10,12 @@
         color: #999;
         font-size: .5em;
     }
+
+    .contained {
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center 0;
+    }
   </style>
   <script src='big.js'></script>
 </head>
@@ -21,6 +27,7 @@
 <div><img src="logo.svg" /></div>
 <!-- things we work on/do at patreon for some added context -->
 <div>frontend</div>
+<div>product</div>
 <div>prototypes</div> <!-- quick prototypes -->
 <div>internal tooling</div>
 <div><img src="internal-tooling.png" /></div> <!-- this is a tool @meanjim built for approving creators for marketing -->
@@ -28,11 +35,13 @@
 <div>legacy codebase</div> <!-- our code is a mix of legacy and not-yet legacy code -->
 <div>messy codebase</div> <!-- overtime it has become somewhat of a messy code base -->
 <div>shitty codebase</div> <!-- after awhile it can feel like a shitty codebase -->
-<div><img src="cry.gif" /></div>
+<div data-bodyclass='contained'><img src="cry.gif" /></div>
 <div>why does this happen?</div> <!-- list a few with out slides like lots of cooks in the kitchen, monolithic architecture etc -->
+<div>assumptions & abstractions</div><!-- we make assumptions which yeild abstractions prematurly, but then no one wants to fix them -->
 <div>product changes so much</div>
 <div>code changes so much</div>
-<div>embrace this change</div> <!-- talk about how we embrace this change @TODO: jon snow photo CHANGE IS COMING -->
+<div>assume change</div>
+<div>embrace change</div> <!-- talk about how we embrace this change @TODO: jon snow photo CHANGE IS COMING -->
 <div class="center">how? <muted>#existentialcrisis</muted></div>
 <div>simple product/designs</div> <!-- always think about how a feature or idea can boildown and be less -->
 <div>shortest path to solution</div> <!-- what's the least amount of effort to implement a feature? -->
@@ -82,10 +91,9 @@
 <!-- Travis -->
 <div>continuous integration</div>
 <div>manual deployment is painful</div>
-<div>travis-ci.org</div>
 <div><img src="travis.png" /></div>
 <div>merge master</div>
-<div>travis ok</div>
+<div>travis ok?</div>
 <div>deploy to firebase</div>
 <div>enjoy life</div>
 
