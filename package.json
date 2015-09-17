@@ -8,6 +8,7 @@
     "firebase-tools": "^1.2.0",
     "lesshat": "^3.0.2",
     "live-server": "^0.8.1",
+    "lodash.values": "^3.0.0",
     "riot": "^2.2.4"
   },
   "devDependencies": {

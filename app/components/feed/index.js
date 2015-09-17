@@ -36,28 +36,15 @@ riot.tag(
     function(opts){
         let feed = this;
 
-        feed.messages = [{
-            avatar_url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbIrWkEMD97RtKdq9BPpZ71fbsmzr7lqyOAxU_L_ILGcy9Tyog',
-            url: 'https://www.twitter.com/meanjim',
-            name: 'The Best Tester',
-            twitter: '@meanjim',
-            text: 'holy shit this is a message'
-        }];
+        feed.messages = [];
 
-        dispatcher.on('update_feed_with_message', function(){
-            feed.messages.push({
-                avatar_url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbIrWkEMD97RtKdq9BPpZ71fbsmzr7lqyOAxU_L_ILGcy9Tyog',
-                url: 'https://www.twitter.com/meanjim',
-                name: 'The Best Tester',
-                twitter: '@meanjim',
-                text: 'holy shit this is a message 2'
-            });
-
+        dispatcher.on('feed_messages', function (messages) {
+            feed.messages = messages;
             feed.update();
         });
 
         dispatcher.on('send_message_from_input', function(data){
-            feed.messages.push({
+            dispatcher.trigger('save_message', {
                 avatar_url: data.twitter.profileImageURL,
                 url: '//www.twitter.com/' + data.twitter.username,
                 name: data.twitter.displayName,
