@@ -37,6 +37,7 @@
     "deploy-firebase": "firebase deploy",
     "link": "rm -f ./node_modules/components; rm -f ./node_modules/constants; rm -f ./node_modules/stores; rm -f ./node_modules/utilities; ln -s ../app/components ./node_modules/components; ln -s ../app/constants ./node_modules/constants; ln -s ../app/stores ./node_modules/stores; ln -s ../app/utilities ./node_modules/utilities;",
     "start": "npm run link; node server",
+    "copy-slides": "mkdir -p dist && cp -r slides dist/slides",
     "production": "npm run link; NODE_ENV=production webpack --config webpack.config.production.js;",
     "deploy-server": "npm run link; npm run production; PORT=3000 NODE_ENV=production node server;"
   },
