@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible"
           content="IE=edge">
 
-    <title>Bare</title>
+    <title>Web Aint Hard</title>
 
     <meta name="description"
-          content="MVP">
+          content="The Web Aint Hard – HackMIT 2015">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -20,10 +20,12 @@
 </head>
 <body>
     <app></app>
+
     {% if (o.htmlWebpackPlugin.options.development) { %}
         <script src="http://localhost:3001/webpack-dev-server.js"></script>
         <script src="http://localhost:3001/dist/app.js"></script>
     {% } %}
+
     {% if (o.htmlWebpackPlugin.options.production) { %}
         <script src="/app.js?sha={%=o.htmlWebpackPlugin.options.sha%}"></script>
     {% } %}
