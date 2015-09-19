@@ -34,15 +34,12 @@
 <!-- context about legacy and messy code bases as a reality of the game -->
 <div>legacy codebase</div> <!-- our code is a mix of legacy and not-yet legacy code -->
 <div>messy codebase</div> <!-- overtime it has become somewhat of a messy code base -->
-<div>shitty codebase</div> <!-- after awhile it can feel like a shitty codebase -->
-<div data-bodyclass='contained'><img src="cry.gif" /></div>
+<div data-bodyclass='contained'><img src="cry.gif" /></div><!-- after awhile it can feel like a shitty codebase -->
 <div>why does this happen?</div> <!-- list a few with out slides like lots of cooks in the kitchen, monolithic architecture etc -->
 <div>assumptions & abstractions</div><!-- we make assumptions which yeild abstractions prematurly, but then no one wants to fix them -->
 <div>product changes so much</div>
 <div>code changes so much</div>
-<div>assume change</div>
 <div data-bodyclass="contained"><img src="change-coming.jpg" /></div>
-<div>embrace change</div> <!-- talk about how we embrace this change @TODO: jon snow photo CHANGE IS COMING -->
 <div><img src="ready.gif" /></div>
 <div class="center">how? <muted>#existentialcrisis</muted></div>
 <div>simple product/designs</div> <!-- always think about how a feature or idea can boildown and be less -->
@@ -52,8 +49,6 @@
 <div>less code <br /><em>* that you author</em></div>
 <div>less code <em>===</em> less bugs</div>
 <div>less code <em>===</em> fewer concepts</div>
-<div>less code <em>===</em></div>
-<div><img src="nirvana.jpg" /></div>
 <div>websites</div>
 <div>html, css, js</div>
 <div><img src="this-presentation.png" /></div>
@@ -79,52 +74,92 @@
 
 <!-- THE CLIENT -->
 <div>context</div>
-<div data-bodyclass="contained"><img src="app001.png" /></div>
 <div>realtime</div>
 <div>realtime bill board</div>
 <div>realtime bill board twitter authenticated</div>
 <div>realtime bill board twitter authenticated sample prototype for learning</div>
+<!-- pause to go over technologies -->
+<div data-bodyclass="contained"><img src="app001.png" /></div>
+
 <!-- some of the tech -->
-<div>JavaScript</div>
-<div>Firebase</div>
 <div>RiotJS</div>
 <div>Webpack</div>
+<div>Firebase</div>
 <div>Travis-CI</div>
+
+<!-- codebase -->
+<div><img src="repo.png" /></div>
+<div>derekr<em>/</em>the-web-aint-hard-hack-mit-2015</div> <!-- fork this repo and check the readme -->
 
 <!-- FIREBASE -->
 <div>Firebase</div> <!-- one stop shop service for kicking off any modern web app -->
 <div><img src="firebase01.png" /></div>
-<div><img src="firebase02.png" /></div>
 <div>realtime data store</div>
 <div><img src="firebase03.png" /></div>
 <div>auth</div>
 <div>hosting</div>
-<div>deploying</div>
-<div><img src="deploy01.png" /></div>
-<div><img src="deploy02.png" /></div>
-<div><img src="deploy03.png" /></div>
 
 <!-- RiotJS -->
 <div>RiotJS</div>
 <div>10x smaller, just 12kbs</div>
 <div>Custom Tags, Event Emitter, Router, Virtual Dom</div>
 <div>most minimalistic API for the job</div>
+<div><img src="component001.png" /></div>
+<div><img src="component002.png" /></div>
 
 <!-- Webpack -->
 <div>Webpack</div>
 <div>bundles dependencies</div>
 <div>returns static assets</div>
 <div>just felt like it</div>
+<div>/dist</div>
+<div>
+/dist<br />
+<small>&nbsp;&nbsp;<em>index.html</em></small><br />
+<small>&nbsp;&nbsp;app.css</small><br />
+<small>&nbsp;&nbsp;app.js</small>
+</div>
+<div>
+/dist<br />
+<small>&nbsp;&nbsp;index.html</small><br />
+<small>&nbsp;&nbsp;<em>app.css</em></small><br />
+<small>&nbsp;&nbsp;app.js</small>
+</div>
+<div>
+/dist<br />
+<small>&nbsp;&nbsp;index.html</small><br />
+<small>&nbsp;&nbsp;app.css</small><br />
+<small>&nbsp;&nbsp;<em>app.js</em></small>
+</div>
+
+<!-- core concepts -->
+
+<!-- deploying -->
 
 <!-- Travis -->
-<div>continuous integration</div>
+<div>continuous integration</div> <!-- doesn't slow you down, but context switching sucks -->
 <div>manual deployment is painful</div>
+<div>
+<pre><em>language:</em> node_js
+<em>node_js:</em>
+  - "0.12"
+<em>after_success:</em>
+  - firebase deploy
+</pre>
+</div>
 <div><img src="travis.png" /></div>
 <div>merge master</div>
 <div>travis ok?</div>
 <div>deploy to firebase</div>
 <div>enjoy life</div>
 <div><img src="lifehack.png" /></div>
+
+<div>
+<em>/dist</em><br />
+<small>&nbsp;&nbsp;index.html</small><br />
+<small>&nbsp;&nbsp;app.css</small><br />
+<small>&nbsp;&nbsp;app.js</small>
+</div>
 
 <!-- THE END -->
 <div>mentoring</div>
